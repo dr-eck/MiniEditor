@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="MiniEditor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiniEditor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="MiniEditor">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <ListView x:Name="MEList" Background="LightGoldenrodYellow" CanReorderItems="True" Height="600">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="#" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="Name" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="Op" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:OpDatWRC">
+                    <Grid x:Name="MEGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{x:Bind Path=opnum}" Width="30" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                        <TextBox Grid.Column="1" Text="{x:Bind Path=name}"/>
+                        <!--<ComboBox Grid.Column="2"  Width="80" SelectedIndex="{x:Bind Path=op, Mode=TwoWay}">-->
+                        <ComboBox Grid.Column="2"  Width="80" SelectedIndex="{x:Bind Path=op, Mode=OneTime}">
+                            <x:String>&lt;</x:String>
+                            <x:String>&gt;</x:String>
+                            <x:String>=</x:String>
+                            <x:String>|&lt;|</x:String>
+                            <x:String>|&gt;|</x:String>
+                            <x:String>|=|</x:String>
+                        </ComboBox>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Window>

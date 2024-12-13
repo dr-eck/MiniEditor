@@ -1,0 +1,17 @@
+namespace MiniEditor
+{
+    struct OpDatWRC
+    {
+        Int32 opnum;
+        String name;
+        Int32 op;
+};
+
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+        void AddOp(String name, Int32 op);
+        Windows.Foundation.Collections.IVectorView<OpDatWRC> GetOps();
+    }
+}
