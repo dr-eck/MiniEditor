@@ -9,7 +9,7 @@ namespace winrt::MiniEditor::implementation
         if (m_opnum != value)
         {
             m_opnum = value;
-            m_propertyChanged(*this, Windows::UI::Xaml::Data::PropertyChangedEventArgs{ L"Opnum" });
+            m_propertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs{ L"Opnum" });
         }
     }
     void OpDatWRC::name(hstring const& value)
@@ -17,7 +17,7 @@ namespace winrt::MiniEditor::implementation
         if (m_name != value)
         {
             m_name = value;
-            m_propertyChanged(*this, Windows::UI::Xaml::Data::PropertyChangedEventArgs{ L"Name" });
+            m_propertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs{ L"Name" });
         }
     }
     void OpDatWRC::op(int32_t value)
@@ -25,10 +25,10 @@ namespace winrt::MiniEditor::implementation
         if (m_op != value)
         {
             m_op = value;
-            m_propertyChanged(*this, Windows::UI::Xaml::Data::PropertyChangedEventArgs{ L"Op" });
+            m_propertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs{ L"Op" });
         }
     }
-    winrt::event_token OpDatWRC::PropertyChanged(winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
+    winrt::event_token OpDatWRC::PropertyChanged(winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
     {
         return m_propertyChanged.add(handler);
     }

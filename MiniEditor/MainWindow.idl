@@ -1,6 +1,6 @@
 namespace MiniEditor
 {
-    runtimeclass OpDatWRC : Windows.UI.Xaml.Data.INotifyPropertyChanged
+    runtimeclass OpDatWRC : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
     {
 		OpDatWRC();
         Int32 opnum;

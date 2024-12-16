@@ -34,9 +34,9 @@
                             <ColumnDefinition Width="80"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{x:Bind Path=opnum}" Width="30" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-                        <TextBox Grid.Column="1" Text="{x:Bind Path=name}"/>
-                        <!--<ComboBox Grid.Column="2"  Width="80" SelectedIndex="{x:Bind Path=op, Mode=TwoWay}">-->
-                        <ComboBox Grid.Column="2"  Width="80" SelectedIndex="{x:Bind Path=op, Mode=OneTime}">
+                        <TextBox Grid.Column="1" Text="{x:Bind Path=name, Mode=TwoWay}"/>
+                        <ComboBox Grid.Column="2"  Width="80" SelectedIndex="{x:Bind Path=op, Mode=TwoWay}">
+                        <!--<ComboBox Grid.Column="2"  Width="80" SelectedIndex="{x:Bind Path=op, Mode=OneTime}">-->
                             <x:String>&lt;</x:String>
                             <x:String>&gt;</x:String>
                             <x:String>=</x:String>

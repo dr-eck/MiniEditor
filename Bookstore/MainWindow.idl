@@ -1,0 +1,10 @@
+import "BookstoreViewModel.idl";
+
+namespace Bookstore
+{
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+        BookstoreViewModel MainViewModel{ get; };
+    }
+}

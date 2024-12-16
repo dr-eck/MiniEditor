@@ -13,13 +13,13 @@ namespace winrt::MiniEditor::implementation
         void name(hstring const& value);
 		int32_t op() { return m_op; }
         void op(int32_t value);
-        winrt::event_token PropertyChanged(winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
+        winrt::event_token PropertyChanged(winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
         void PropertyChanged(winrt::event_token const& token) noexcept;
     private:
 		int m_opnum;
 		hstring m_name;
 		int m_op;
-        winrt::event<Windows::UI::Xaml::Data::PropertyChangedEventHandler> m_propertyChanged;
+        winrt::event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> m_propertyChanged;
     };
 }
 namespace winrt::MiniEditor::factory_implementation
