@@ -1,7 +1,8 @@
 namespace MiniEditor
 {
-    struct OpDatWRC
+    runtimeclass OpDatWRC : Windows.UI.Xaml.Data.INotifyPropertyChanged
     {
+		OpDatWRC();
         Int32 opnum;
         String name;
         Int32 op;

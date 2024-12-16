@@ -25,9 +25,9 @@ namespace winrt::MiniEditor::implementation
     {
         // Create an instance of OpDatWRC
         winrt::MiniEditor::OpDatWRC newItem;
-        newItem.opnum = ops.Size();
-        newItem.name = name;
-        newItem.op = op;
+        newItem.opnum(ops.Size());
+        newItem.name(name);
+        newItem.op(op);
 
         // Add the new item to the IObservableVector
         ops.Append(newItem);
