@@ -1,14 +1,8 @@
+import "OpDatWRC.idl";
+
 namespace MiniEditor
 {
-    runtimeclass OpDatWRC : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
-    {
-		OpDatWRC();
-        Int32 opnum;
-        String name;
-        Int32 op;
-};
-
-    [default_interface]
+	[default_interface]
     runtimeclass MainWindow : Microsoft.UI.Xaml.Window
     {
         MainWindow();
